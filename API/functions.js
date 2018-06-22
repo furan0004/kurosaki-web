@@ -1,5 +1,5 @@
 function goPage(url){
-	Location.href = url.toString();
+	location.href = url.toString();
 }
 
 function openWindow(url){
