@@ -8,5 +8,5 @@ plusClover.addEventListener("click",function(){
 
 twitterClover.addEventListener("click",function(){
 	let url = "https://www.twitter.com/furan0004";
-	openWindow(url);
+	goPage(url);
 },false);
