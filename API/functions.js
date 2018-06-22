@@ -9,3 +9,5 @@ function openWindow(url){
 function getElement(id){
 	return document.getElementById(id.toString());
 }
+
+alert("functions.js loaded!");
