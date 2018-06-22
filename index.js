@@ -5,7 +5,7 @@ const linksClover = getElement("clover4");
 
 plusClover.addEventListener("click",function(){
 	let url = "https://plus.google.com/+DarknessLotus";
-	openwindow(url);
+	openWindow(url);
 },false);
 
 twitterClover.addEventListener("click",function(){
