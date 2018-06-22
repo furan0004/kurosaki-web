@@ -5,3 +5,7 @@ function goPage(url){
 function openWindow(url){
 	window.open(url.toString());
 }
+
+function getElement(id){
+	return document.getElementById(id.toString());
+}
