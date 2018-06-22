@@ -5,12 +5,12 @@ const linksClover = getElement("clover4");
 
 plusClover.addEventListener("click",function(){
 	let url = "https://plus.google.com/+DarknessLotus";
-	window.open(url);
+	openwindow(url);
 },false);
 
 twitterClover.addEventListener("click",function(){
 	let url = "https://www.twitter.com/furan0004";
-	goPage(url);
+	openWindow(url);
 },false);
 
 contentsClover.addEventListener("click",function(){
