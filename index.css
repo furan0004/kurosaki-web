@@ -14,10 +14,6 @@ p {
 	align-items: center;
 	transform:translate(0%,0%);
 	height:20;
-	
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
 }
 
 #title{
@@ -25,7 +21,11 @@ p {
 	justify-content:center;
 	align-items:centerm;
 	font-size:10vw;
-	margin:2vw
+	margin:2vw;
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 .clover-base{
