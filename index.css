@@ -1,3 +1,9 @@
+p {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
 #header{
 	background-color:#44FFFF;
 	border-radius:10vw;
@@ -26,24 +32,52 @@
 	border-radius:50% 50% 0% 50%;
 	width:40vw;
 	height:40vw;
+	
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-moz-touch-callout:none;
+	-moz-user-select:none;
+	touch-callout:none;
+	user-select:none;
 }
 
 .clover2{
 	border-radius:50% 50% 50% 0%;
 	width:40vw;
 	height:40vw;
+	
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-moz-touch-callout:none;
+	-moz-user-select:none;
+	touch-callout:none;
+	user-select:none;
 }
 
 .clover3{
 	border-radius:50% 0% 50% 50%;
 	width:40vw;
 	height:40vw;
+	
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-moz-touch-callout:none;
+	-moz-user-select:none;
+	touch-callout:none;
+	user-select:none;
 }
 
 .clover4{
 	border-radius:0% 50% 50% 50%;
 	width:40vw;
 	height:40vw;
+	
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-moz-touch-callout:none;
+	-moz-user-select:none;
+	touch-callout:none;
+	user-select:none;
 }
 
 .clover-button1{
