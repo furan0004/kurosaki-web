@@ -14,11 +14,11 @@ twitterClover.addEventListener("click",function(){
 },false);
 
 contentsClover.addEventListener("click",function(){
-	let url = "/pages/contents.html";
+	let url = "/pages/contents/contents.html";
 	goPage(url);
 },false);
 
 linksClover.addEventListener("click",function(){
-	let url = "/pages/links.html";
+	let url = "/pages/links/links.html";
 	goPage(url);
 },false);
