@@ -4,7 +4,7 @@ let downCount = -1;
 function count(){
 	if(downCount != -1){
 		if(downCount >= 2){
-			history.reload();
+			location.reload();
 		}
 		downCount++;
 		
