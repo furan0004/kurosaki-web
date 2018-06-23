@@ -1,24 +1,8 @@
 const titleBar = getElement("title");
-let downCount = -1;
-
-function count(){
-	if(downCount != -1){
-		if(downCount >= 2){
-			location.reload();
-		}
-		downCount++;
-		
-		setTimeout(count,1000);
-	}
-}
 
 titleBar.addEventListener("click",function(){
 	downCount = -1;
 	alert("Clicked!");
-},false);
-
-titleBar.addEventListener("mousedown",function(){
-	downCount = 0;
 },false);
 
 const plusClover = getElement("clover1");
