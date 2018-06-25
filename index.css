@@ -143,9 +143,9 @@ p {
 
 .clover-text4{
 	position:absolute;
-	bottom:45%;
+	bottom:40%;
 	left:45%;
-	transform:translate(-45%,45%);
+	transform:translate(-45%,40%);
 	
 	color:#FFFFFF;
 	font-size:5vw;
