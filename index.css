@@ -37,6 +37,8 @@ p {
 	width:40vw;
 	height:40vw;
 	
+	background:linear-gradient(45deg, #FFFF00, #00FF88);
+	
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
 	-moz-touch-callout:none;
@@ -49,6 +51,8 @@ p {
 	border-radius:50% 50% 50% 0%;
 	width:40vw;
 	height:40vw;
+	
+	background:linear-gradient(45deg, #FFFF00, #00FF88);
 	
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
@@ -63,6 +67,8 @@ p {
 	width:40vw;
 	height:40vw;
 	
+	background:linear-gradient(45deg, #FFFF00, #00FF88);
+	
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
 	-moz-touch-callout:none;
@@ -75,6 +81,8 @@ p {
 	border-radius:0% 50% 50% 50%;
 	width:40vw;
 	height:40vw;
+	
+	background:linear-gradient(45deg, #FFFF00, #00FF88);
 	
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
