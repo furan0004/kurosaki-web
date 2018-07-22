@@ -37,7 +37,7 @@ p {
 	width:40vw;
 	height:40vw;
 	
-	background:linear-gradient(45deg, #FFFF00, #00FF88);
+	background:linear-gradient(-45deg, #FFFF00, #00FF88);
 	
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
@@ -67,7 +67,7 @@ p {
 	width:40vw;
 	height:40vw;
 	
-	background:linear-gradient(45deg, #FFFF00, #00FF88);
+	background:linear-gradient(135deg, #FFFF00, #00FF88);
 	
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
@@ -82,7 +82,7 @@ p {
 	width:40vw;
 	height:40vw;
 	
-	background:linear-gradient(45deg, #FFFF00, #00FF88);
+	background:linear-gradient(-135deg, #FFFF00, #00FF88);
 	
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
