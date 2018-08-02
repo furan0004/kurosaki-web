@@ -16,7 +16,7 @@ plusClover.addEventListener("click",function(){
 },false);
 
 twitterClover.addEventListener("click",function(){
-	let url = "https://www.twitter.com/furan0004";
+	let url = "https://www.twitter.com/lotus_darkness";
 	openWindow(url);
 },false);
 
