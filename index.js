@@ -4,7 +4,7 @@ function showPage(){
 		"<title>くろんのへや</title>",
 		"</head>",
 		"<body>",
-		"<a align='center' href='https://www.twitter.com/lotus_darkness/'>Go Twitter</a>",
+		"<a style='text-align:center' href='https://www.twitter.com/lotus_darkness/'>Go Twitter</a>",
 		"</body>",
 	];
 					
