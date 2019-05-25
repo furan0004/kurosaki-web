@@ -4,7 +4,7 @@ function showPage(){
 		"<title>くろんのへや</title>",
 		"</head>",
 		"<body>",
-		"",
+		"<a href='https://www.twiter.com/lotus_darkness/'>Go Twitter"</a>,
 		"</body>",
 	];
 					
@@ -22,7 +22,7 @@ function showPage(){
 			showPage();
 			alert("complete");
 		}else{
-			document.write("Wrong Referrer");
+			document.write("Wrong Referrer\n<a href='http://evassmat.com/E0an'>Go through the correct route</a>");
 		}
 	}else{
 		alert(href);
