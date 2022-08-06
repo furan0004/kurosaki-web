@@ -16,7 +16,7 @@ function showPage(){
 	let href = location.href;
 	let ref = document.referrer;
 	
-	if(href == "https://furan0004.github.io/"){
+	if(true){
 		let spl = ref.split("/"); 
 		if(spl[2] == "gloyah.net" && spl[4].split("?")[0] =="E0an"){
 			showPage();
