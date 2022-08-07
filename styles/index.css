@@ -1,0 +1,20 @@
+.line{
+    width: 960px;
+    min-height: calc(75vh - 8px);
+
+    margin: 0 auto;
+    padding: 4px;
+
+    background: #C0F0C0;
+}
+
+h1{
+    margin: 2px 0;
+}
+
+
+@media screen and (max-width: 959px) {
+    .line{
+        width: 100vw;
+    }
+}
