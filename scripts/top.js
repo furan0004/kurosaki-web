@@ -110,8 +110,20 @@ class TopBar {
         return this.#back;
     }
 
+    setTitle(title){
+        this.#title = title;
+    }
+
+    getTitle(){
+        return this.#title;
+    }
+
     setBackground(background){
         this.#background = (background.charAt(0) == "#") ? background : `url("${background}")`;
+    }
+
+    getBackground(){
+        return (this.#background.charAt(0) == "#") ? this.#background : this.#background.slice(5, -2); 
     }
 }
 
