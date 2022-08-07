@@ -16,6 +16,5 @@
 @media screen and (max-width: 959px) {
     .line{
         width: calc(100vw - 16px);
-        min-height: calc(87.5vh - 8px);
     }
 }

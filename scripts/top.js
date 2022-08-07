@@ -27,11 +27,14 @@ class TopBar {
     #back;
     #background = "url('res/images/flower5544.jpg')";
 
+    #home;
+    #HOME_ICON = "res/images/home.svg";
+
     #title = "No Title";
 
     constructor(title){
         this.renew();
-        this.#title = title;
+        if(title != null) this.#title = title;
     }
 
     renew(){
@@ -45,11 +48,23 @@ class TopBar {
         let topMenu = document.createElement("div");
         topMenu.className = BASE_CLASS_NAME + "_top_menu";
 
+        let home = this.getHome();
+        if(home != null){
+            let homeBtn = document.createElement("img");
+            homeBtn.src =  this.getHomeIcon();
+            homeBtn.classList.add(topMenu.classList[0] + "_home");
+            homeBtn.onclick = function(){
+                location.href = home;
+            };
+
+            topMenu.appendChild(homeBtn);
+        }
+
         let blank = document.createElement("div");
         blank.className = BASE_CLASS_NAME + "_blank";
 
         let titleBar = document.createElement("p");
-        titleBar.innerText = this.#title;
+        titleBar.innerText = this.getTitle();
         titleBar.className = BASE_CLASS_NAME + "_title";
 
         blank.appendChild(titleBar);
@@ -114,11 +129,32 @@ class TopBar {
     getBackground(){
         return (this.#background.charAt(0) == "#") ? this.#background : this.#background.slice(5, -2); 
     }
+
+    getHomeIcon(){
+        return this.#HOME_ICON;
+    }
+
+    setHomeIcon(path){
+        this.#HOME_ICON = path;
+    }
+
+    getHome(){
+        return this.#home;
+    }
+
+    setHome(path){
+        this.#home = path;
+    }
 }
 
 var TopBars = [];
 var elements = document.getElementsByClassName(BASE_CLASS_NAME);
 for(let i = 0; i < elements.length; i++){
-    TopBars.push(new TopBar());
-    elements[i].appendChild(TopBars[i].build());
+    let topbar = new TopBar();
+    topbar.setHome("https://pages.kurosaki.love");
+    
+    topbar.renew();
+
+    elements[i].appendChild(topbar.build());
+    TopBars.push(topbar);
 }

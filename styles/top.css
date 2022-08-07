@@ -7,6 +7,10 @@ body{
     height: 25vh;
 }
 
+.topbar *{
+    user-select: none;
+}
+
 .topbar_back{
     width: 100%;
     height: 100%;
@@ -32,6 +36,13 @@ body{
 .topbar_top_menu{
     width: 100%;
     height: 48px;
+
+    display: flex;
+}
+
+.topbar_top_menu_home{
+    width: auto;
+    height: 100%;
 }
 
 .topbar_blank{
