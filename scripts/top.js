@@ -75,16 +75,24 @@ class TopBar {
                     bottomMenu.classList.add(classes[0]);
                     bottomMenu.classList.remove(classes[1]);
 
+                    for(let j = 0; j < bottomMenuBtns.length; j++){
+                        bottomMenuBtns[j].style.transform = `translateY(${100*i}%)`;
+                    }
+
                     _label.innerText = "Close";
                 }else{
                     bottomMenu.classList.add(classes[1]);
                     bottomMenu.classList.remove(classes[0]);
 
+                    for(let j = 0; j < bottomMenuBtns.length; j++){
+                        bottomMenuBtns[j].style.transform = `translateY(${-100*i}%)`;
+                    }
+
                     _label.innerText = "Open";
                 }             
 
                 for(let j = 0; j < bottomMenuBtns.length; j++){
-                    bottomMenuBtns[j].classList.add("");
+                    bottomMenuBtns[j].style.transform = `translateY(${-100*i}%)`;
                 }
             } : function(){
                 window.open(urls[i][1]);
