@@ -109,8 +109,15 @@ class TopBar {
         this.#load();
         return this.#back;
     }
+
+    setBackground(background){
+        this.#background = (background.charAt(0) == "#") ? background : `url("${background}")`;
+    }
 }
 
-
+var TopBars = [];
 var elements = document.getElementsByClassName(BASE_CLASS_NAME);
-for(let i = 0; i < elements.length; i++) elements[i].appendChild((new TopBar()).build());
+for(let i = 0; i < elements.length; i++){
+    TopBars.push(new TopBar());
+    elements[i].appendChild(TopBars[i].build());
+}
