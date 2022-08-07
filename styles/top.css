@@ -79,12 +79,6 @@ body{
 
 @media screen and (max-width: 959px) {
     .topbar_title{
-        font-size: 64px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .topbar_title{
         font-size: 32px;
     }
 
