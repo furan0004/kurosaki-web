@@ -4,18 +4,22 @@ var urls = [
     [
         "Twitter Main",
         "https://twitter.com/KuronKurosaki",
+        "res/images/twitter.svg",
     ],
     [
         "Twitter Sub",
         "https://twitter.com/kuron_nano",
+        "res/images/twitter.svg",
     ],
     [
         "YouTube 1",
         "https://www.youtube.com/channel/UCArGke6099LSxDdHbzJOFnQ",
+        "res/images/youtube.svg",
     ],
     [
         "YouTube 2",
         "https://www.youtube.com/channel/UCrjrRi8XRbQ03j_YlvVVKmA",
+        "res/images/youtube.svg",
     ],
 ];
 
@@ -54,50 +58,27 @@ class TopBar {
         bottomMenu.className = BASE_CLASS_NAME + "_bottom_menu";
 
         let bottomMenuBtns = [];
-        for(let i = -1; i < 4; i++){
+        for(let i = 0; i < 4; i++){
             let btn = document.createElement("div");
-            let label = document.createElement("p");
+            let label = document.createElement("div");
+            let labelText = document.createElement("p");
+            let icon = document.createElement("img");
 
             btn.className = bottomMenu.className + "_button";
-            if(i < 0) btn.classList.add(bottomMenu.className + "_toggle");
-
-            label.className = btn.classList[0]+ "_label";
-            label.innerText = (i < 0) ? "Open" : urls[i][0];
-
-            btn.onclick = (i < 0) ? function(){
-                let _label = btn.children[0];
-                let classes = [
-                    BASE_CLASS_NAME + "_bottom_menu_shown",
-                    BASE_CLASS_NAME + "_bottom_menu_hiddden",
-                ];
-
-                if(_label.innerText == "Open"){
-                    bottomMenu.classList.add(classes[0]);
-                    bottomMenu.classList.remove(classes[1]);
-
-                    for(let j = 0; j < bottomMenuBtns.length; j++){
-                        bottomMenuBtns[j].style.transform = `translateY(${100*i}%)`;
-                    }
-
-                    _label.innerText = "Close";
-                }else{
-                    bottomMenu.classList.add(classes[1]);
-                    bottomMenu.classList.remove(classes[0]);
-
-                    for(let j = 0; j < bottomMenuBtns.length; j++){
-                        bottomMenuBtns[j].style.transform = `translateY(${-100*i}%)`;
-                    }
-
-                    _label.innerText = "Open";
-                }             
-
-                for(let j = 0; j < bottomMenuBtns.length; j++){
-                    bottomMenuBtns[j].style.transform = `translateY(${-100*i}%)`;
-                }
-            } : function(){
+            btn.onclick = function(){
                 window.open(urls[i][1]);
             };
 
+            label.classList.add(btn.classList[0]+ "_label");
+
+            labelText.classList.add(btn.classList[0]+ "_label_text");
+            labelText.innerText = urls[i][0];
+
+            icon.classList.add(btn.classList[0]+ "_label_icon");
+            icon.src = urls[i][2];
+
+            label.appendChild(icon);
+            label.appendChild(labelText);
             btn.appendChild(label);
             bottomMenu.appendChild(btn);
         }
