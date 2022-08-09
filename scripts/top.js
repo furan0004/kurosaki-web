@@ -23,7 +23,7 @@ var menuItems= [
 
 
 class TopBar {
-    static ROOT_PATH = (location.href == "https://pages.kurosaki.love" || location.href ==  "https://pages.kurosaki.love/index.html") ? "" : "https://pages.kurosaki.love";
+    static ROOT_PATH = (location.href == "https://pages.kurosaki.love" || location.href ==  "https://pages.kurosaki.love/index.html") ? "" : "https://pages.kurosaki.love/";
     static DEFAULT_RESOURCES = {
         BACKGROUND: TopBar.ROOT_PATH + "res/images/flower5544.jpg",
         ICON: {
