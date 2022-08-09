@@ -23,12 +23,13 @@ var menuItems= [
 
 
 class TopBar {
+    static ROOT_PATH = (location.href == "https://pages.kurosaki.love" || location.href ==  "https://pages.kurosaki.love/index.html") ? "" : "https://pages.kurosaki.love";
     static DEFAULT_RESOURCES = {
-        BACKGROUND: "res/images/flower5544.jpg",
+        BACKGROUND: TopBar.ROOT_PATH + "res/images/flower5544.jpg",
         ICON: {
-            HOME: "res/images/home.svg",
-            TWITTER: "res/images/twitter.svg",
-            YOUTUBE: "res/images/youtube.svg",
+            HOME: TopBar.ROOT_PATH + "res/images/home.svg",
+            TWITTER: TopBar.ROOT_PATH + "res/images/twitter.svg",
+            YOUTUBE: TopBar.ROOT_PATH + "res/images/youtube.svg",
         },
     };
 
