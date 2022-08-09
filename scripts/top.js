@@ -1,27 +1,3 @@
-var menuItems= [
-    {
-        text: "Twitter Main",
-        url: "https://twitter.com/KuronKurosaki",
-        icon: "res/images/twitter.svg",
-    },
-    {
-        text: "Twitter Sub",
-        url: "https://twitter.com/kuron_nano",
-        icon: "res/images/twitter.svg",
-    },
-    {
-        text: "YouTube 1",
-        url: "https://www.youtube.com/channel/UCArGke6099LSxDdHbzJOFnQ",
-        icon: "res/images/youtube.svg",
-    },
-    {
-        text: "YouTube 2",
-        url: "https://www.youtube.com/channel/UCrjrRi8XRbQ03j_YlvVVKmA",
-        icon: "res/images/youtube.svg",
-    },
-];
-
-
 class TopBar {
     static ROOT_PATH = (location.href == "https://pages.kurosaki.love" || location.href ==  "https://pages.kurosaki.love/index.html") ? "" : "https://pages.kurosaki.love/";
     static DEFAULT_RESOURCES = {
@@ -212,6 +188,29 @@ class TopBar {
         return this.#bottomMenuItems;
     }
 }
+
+var menuItems= [
+    {
+        text: "Twitter Main",
+        url: "https://twitter.com/KuronKurosaki",
+        icon: TopBar.DEFAULT_RESOURCES.ICON.TWITTER,
+    },
+    {
+        text: "Twitter Sub",
+        url: "https://twitter.com/kuron_nano",
+        icon: TopBar.DEFAULT_RESOURCES.ICON.TWITTER,
+    },
+    {
+        text: "YouTube 1",
+        url: "https://www.youtube.com/channel/UCArGke6099LSxDdHbzJOFnQ",
+        icon: TopBar.DEFAULT_RESOURCES.ICON.YOUTUBE,
+    },
+    {
+        text: "YouTube 2",
+        url: "https://www.youtube.com/channel/UCrjrRi8XRbQ03j_YlvVVKmA",
+        icon: TopBar.DEFAULT_RESOURCES.ICON.YOUTUBE,
+    },
+];
 
 var TopBars = [];
 var elements = document.getElementsByClassName(TopBar.CLASS.BASE);
