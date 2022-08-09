@@ -158,13 +158,13 @@ class TopBar {
         this.#elements.back.appendChild(this.#elements.cover);
     }
 
-    #load(){
+    load(){
         this.#elements.back.style.background = this.#background;
         this.renew();
     }
 
     build(){
-        this.#load();
+        this.load();
         return this.#elements.back;
     }
 
