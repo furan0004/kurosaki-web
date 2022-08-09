@@ -8,7 +8,7 @@
     background: #D0FFD0;
 }
 
-.line *{
+.line > *{
     width: 100%;
     margin: 2px 0;
 }
