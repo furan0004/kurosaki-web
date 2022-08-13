@@ -101,9 +101,10 @@ class TopBar {
             let labelText = document.createElement("p");
             let icon = document.createElement("img");
 
+            let to = this.#bottomMenuItems[i].url;
             btn.className = TopBar.CLASS.BOTTOM_MENU_BUTTON;
             btn.onclick = function(){
-                window.open(this.#bottomMenuItems[i].url);
+                window.open(to);
             };
 
             label.classList.add(TopBar.CLASS.BOTTOM_MENU_BUTTON_LABEL);
