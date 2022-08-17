@@ -40,6 +40,11 @@ body{
     display: flex;
 }
 
+.topbar_top_menu_home_anchor{
+    width: auto;
+    height: 100%;
+}
+
 .topbar_top_menu_home{
     width: auto;
     height: 100%;

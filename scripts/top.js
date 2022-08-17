@@ -15,6 +15,7 @@ class TopBar {
         COVER: "topbar_cover",
 
         TOP_MENU: "topbar_top_menu",
+        HOME_BUTTON_ANCHOR: "topbar_top_menu_home_anchor",
         HOME_BUTTON: "topbar_top_menu_home",
 
         BLANK: "topbar_blank",
@@ -32,6 +33,7 @@ class TopBar {
         back: null,
         cover: null,
         topMenu: null,
+        homeButtonAnchor: null,
         homeButton: null,
         bottomMenu: null,
         bottomMenuBtns: [],
@@ -71,16 +73,18 @@ class TopBar {
         this.#elements.topMenu = document.createElement("div");
         this.#elements.topMenu.classList.add(TopBar.CLASS.TOP_MENU);
 
+
         let home = this.getHome();
         if(home != null){
-            this.#elements.homeBtn = document.createElement("img");
-            this.#elements.homeBtn.classList.add(TopBar.CLASS.HOME_BUTTON);
-            this.#elements.homeBtn.src =  this.getHomeIcon();
-            this.#elements.homeBtn.onclick = function(){
-                location.href = home;
-            };
+            this.#elements.homeButtonAnchor = document.createElement("a");
+            this.#elements.homeButtonAnchor.href = home;
 
-            this.#elements.topMenu.appendChild(this.#elements.homeBtn);
+            this.#elements.homeButton = document.createElement("img");
+            this.#elements.homeButton.classList.add(TopBar.CLASS.HOME_BUTTON);
+            this.#elements.homeButton.src =  this.getHomeIcon();
+
+            this.#elements.homeButtonAnchor.appendChild(this.#elements.homeButton);
+            this.#elements.topMenu.appendChild(this.#elements.homeButtonAnchor);
         }
 
         this.#elements.blank = document.createElement("div");
