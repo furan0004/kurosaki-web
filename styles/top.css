@@ -49,7 +49,6 @@ body{
     background: #FFFFFF20;
 }
 
-
 .topbar_blank{
     width: auto;
     height: calc(100% - 96px);
@@ -62,8 +61,13 @@ body{
     display: flex;
 }
 
-.topbar_bottom_menu_button{
+.topbar_bottom_menu_button_anchor{
     width: 25%;
+    height: 100%;
+}
+
+.topbar_bottom_menu_button{
+    width: 100%;
     height: 100%;
 
     display: flex;

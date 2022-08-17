@@ -22,6 +22,7 @@ class TopBar {
 
         BOTTOM_MENU: "topbar_bottom_menu",
         BOTTOM_MENU_BUTTON: "topbar_bottom_menu_button",
+        BOTTOM_MENU_BUTTON_ANCHOR: "topbar_bottom_menu_button_anchor",
         BOTTOM_MENU_BUTTON_LABEL: "topbar_bottom_menu_button_label",
         BOTTOM_MENU_BUTTON_LABEL_TEXT: "topbar_bottom_menu_button_label_text",
         BOTTOM_MENU_BUTTON_LABEL_ICON: "topbar_bottom_menu_button_label_icon",
@@ -96,31 +97,32 @@ class TopBar {
 
         this.#elements.bottomMenuBtns = [];
         for(let i = 0; i < this.#bottomMenuItems.length; i++){
+            let anchor = document.createElement("a");
+            anchor.classList.add(TopBar.CLASS.BOTTOM_MENU_BUTTON_ANCHOR);
+            anchor.href = this.#bottomMenuItems[i].url;
+
             let btn = document.createElement("div");
+            btn.classList.add(TopBar.CLASS.BOTTOM_MENU_BUTTON);
+
             let label = document.createElement("div");
-            let labelText = document.createElement("p");
-            let icon = document.createElement("img");
-
-            let to = this.#bottomMenuItems[i].url;
-            btn.className = TopBar.CLASS.BOTTOM_MENU_BUTTON;
-            btn.onclick = function(){
-                window.open(to);
-            };
-
             label.classList.add(TopBar.CLASS.BOTTOM_MENU_BUTTON_LABEL);
 
+            let labelText = document.createElement("p");
             labelText.classList.add(TopBar.CLASS.BOTTOM_MENU_BUTTON_LABEL_TEXT);
             labelText.innerText = this.#bottomMenuItems[i].text;
 
+            let icon = document.createElement("img");
             icon.classList.add(TopBar.CLASS.BOTTOM_MENU_BUTTON_LABEL_ICON);
             icon.src = this.#bottomMenuItems[i].icon;
 
             label.appendChild(icon);
             label.appendChild(labelText);
             btn.appendChild(label);
-            this.#elements.bottomMenu.appendChild(btn);
+            anchor.appendChild(btn);
+            this.#elements.bottomMenu.appendChild(anchor);
 
             this.#elements.bottomMenuBtns.push({
+                anchor: anchor,
                 btn: btn,
                 label: label,
                 labelText: labelText,
