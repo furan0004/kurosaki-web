@@ -12,7 +12,7 @@
     {
         "text": "YouTube 1",
         "url": "https://www.youtube.com/channel/UCArGke6099LSxDdHbzJOFnQ",
-        "icon": "default://icon_youtube",
+        "icon": "default://icon_youtube"
     },
     {
         "text": "YouTube 2",
