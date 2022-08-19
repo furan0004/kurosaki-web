@@ -1,4 +1,4 @@
-import topbarSheet from "../styles/top.css" assert {type: "css"};
+import topbarSheet from "../styles/topbar.css" assert {type: "css"};
 document.adoptedStyleSheets.push(topbarSheet);
 
 export class TopBar {
