@@ -13,5 +13,6 @@ topbar.setMenu(menuItems);
 
 elements[0].appendChild(topbar.build());
 
+console.log(moo);
 
 export default topbar;
