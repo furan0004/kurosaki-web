@@ -1,4 +1,4 @@
-import css from "../styles/top.css" assert {type: "css"};
+import _css from "../styles/top.css" assert {type: "css"};
 
 export class TopBar {
     static ROOT_PATH = (location.href == "https://pages.kurosaki.love" || location.href ==  "https://pages.kurosaki.love/index.html") ? "" : "https://pages.kurosaki.love/";
