@@ -1,5 +1,5 @@
 import { TopBar } from "./topbar.js";
-import * as menuItems  from "../data/menuItems.json";
+import menuItems  from "../data/menuItems.json" assert { type: "json" };
 
 var TopBars = [];
 var elements = document.getElementsByClassName(TopBar.CLASS.BASE);
