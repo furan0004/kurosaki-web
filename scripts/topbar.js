@@ -1,6 +1,6 @@
-import sheet from "../styles/top.css" assert {type: "css"};
-document.adoptedStyleSheets = [sheet];
-ShadowRoot.adoptedStyleSheets = [sheet];
+import topbarSheet from "../styles/top.css" assert {type: "css"};
+document.adoptedStyleSheets = [topbarSheet];
+ShadowRoot.adoptedStyleSheets = [topbarSheet];
 
 export class TopBar {
     static ROOT_PATH = (location.href == "https://pages.kurosaki.love" || location.href ==  "https://pages.kurosaki.love/index.html") ? "" : "https://pages.kurosaki.love/";
