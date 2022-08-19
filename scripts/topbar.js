@@ -1,3 +1,7 @@
+import _css from "../styles/top.css" assert {type: "css"};
+console.log(_css);
+
+
 export class TopBar {
     static ROOT_PATH = (location.href == "https://pages.kurosaki.love" || location.href ==  "https://pages.kurosaki.love/index.html") ? "" : "https://pages.kurosaki.love/";
     static DEFAULT_RESOURCES = {
@@ -123,7 +127,7 @@ export class TopBar {
 
             let icon = document.createElement("img");
             icon.classList.add(TopBar.CLASS.BOTTOM_MENU_BUTTON_LABEL_ICON);
-            icon.src = this.#bottomMenuItems[i].icon;
+            icon.src = (Object.keys(TopBar.RESOURCE_SHORT).indexOf(this.#bottomMenuItems[i].icon) != -1) ? TopBar.RESOURCE_SHORT[this.#bottomMenuItems[i].icon] : this.#bottomMenuItems[i].icon;
 
             label.appendChild(icon);
             label.appendChild(labelText);
@@ -174,15 +178,11 @@ export class TopBar {
     }
 
     getHomeIcon(){
-        let result = this.#homeIcon;
-        let keys = Object.keys(TopBar.RESOURCE_SHORT);
-        for(let i = 0; i < keys.length; i++) if(TopBar.RESOURCE_SHORT[keys[i]] == this.#homeIcon) result = keys[i];
-
-        return result;
+        return this.#homeIcon;
     }
 
     setHomeIcon(path){
-        this.#homeIcon = (Object.keys(TopBar.RESOURCE_SHORT).indexOf(path) != -1) ? TopBar.RESOURCE_SHORT[path] : path;
+        this.#homeIcon = path;
     }
 
     getHome(){
