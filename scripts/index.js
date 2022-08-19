@@ -1,4 +1,4 @@
-import { TopBar } from "./topbar.js";
+import { TopBar } from "./topbar.js" assert {type: "javascript"};
 import menuItems  from "../data/menuItems.json" assert { type: "json" };
 import indexSheet from "../styles/index.css" assert {type: "css"};
 document.adoptedStyleSheets.push(indexSheet);
