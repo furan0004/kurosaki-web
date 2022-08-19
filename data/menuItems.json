@@ -1,0 +1,22 @@
+[
+    {
+        "text": "Twitter Main",
+        "url": "https://twitter.com/KuronKurosaki",
+        "icon": "default://icon_twitter"
+    },
+    {
+        "text": "Twitter Sub",
+        "url": "https://twitter.com/kuron_nano",
+        "icon": "default://icon_twitter"
+    },
+    {
+        "text": "YouTube 1",
+        "url": "https://www.youtube.com/channel/UCArGke6099LSxDdHbzJOFnQ",
+        "icon": "default://icon_youtube",
+    },
+    {
+        "text": "YouTube 2",
+        "url": "https://www.youtube.com/channel/UCrjrRi8XRbQ03j_YlvVVKmA",
+        "icon": "default://icon_youtube",
+    }
+]
