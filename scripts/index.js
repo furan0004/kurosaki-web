@@ -1,3 +1,5 @@
+export default 0;
+
 import { TopBar } from "./topbar.js";
 import menuItems  from "../data/menuItems.json" assert { type: "json" };
 import indexSheet from "../styles/index.css" assert {type: "css"};
