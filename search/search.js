@@ -17,9 +17,32 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
     topbar.load();
     topbar.setSearchQuery(queries);
 
-    for(let i = 0; i < pageData.length; i++){
-        let item = createItem(pageData[i]);
+    let queryList = queries.split(" ");
 
+    let searchItems = [];
+    for(let i = 0; i < pageData.length; i++){
+        let score = 0;
+
+        let keys = Object.keys(pageData[i]);
+        for(let j = 0; j < keys.length; j++){
+            let data = pageData[i][keys[j]]
+            for(let k = 0; k < queryList.length; k++){
+                if(data == query[k]) score += 10**6;
+                if(data.toLowerCase() == query[k].toLowerCase()) score += 10**3;
+
+                score += 3*data.matchCount(query[k]) + data.toLowerCase().matchCount(query[k].toLowerCase());
+            }
+       }
+
+        if(score != 0) searchItems.push([pageData[i], score]);
+    }
+    
+    searchItems.sort(function(a, b){
+        return b[1] - a[1];
+    });
+
+    for(let i = 0; i < searchItems.length; i++){
+        let item = createItem(searchItems[i][0]);
         line.appendChild(item);
     }
 })();
@@ -52,4 +75,18 @@ function createItem(info){
     back.appendChild(descriptionRow);
 
     return back;
+}
+
+
+String.prototype.matchCount = function(str){
+    let count = 0;
+
+    let index = this.indexOf(str);
+    while(index != -1){
+        console.log(index);
+        count++;
+        index = this.indexOf(str, index + 1);
+    }
+
+    return count;
 }
