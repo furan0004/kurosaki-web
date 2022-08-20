@@ -7,6 +7,7 @@ export class TopBar {
         BACKGROUND: TopBar.ROOT_PATH + "res/images/flower5544.jpg",
         ICON: {
             HOME: TopBar.ROOT_PATH + "res/images/home.svg",
+            SEARCH: TopBar.ROOT_PATH + "res/images/search.svg",
             TWITTER: TopBar.ROOT_PATH + "res/images/twitter.svg",
             YOUTUBE: TopBar.ROOT_PATH + "res/images/youtube.svg",
         },
@@ -14,6 +15,7 @@ export class TopBar {
 
     static RESOURCE_SHORT = {
         "default://icon_home": TopBar.DEFAULT_RESOURCES.ICON.HOME,
+        "default://icon_search": TopBar.DEFAULT_RESOURCES.ICON.SEARCH,
         "default://icon_twitter": TopBar.DEFAULT_RESOURCES.ICON.TWITTER,
         "default://icon_youtube": TopBar.DEFAULT_RESOURCES.ICON.YOUTUBE,
     };
@@ -112,6 +114,7 @@ export class TopBar {
         
         this.#elements.searchButton = document.createElement("img");
         this.#elements.searchButton.classList.add(TopBar.CLASS.SEARCH_MENU_BUTTON);
+        this.#elements.searchButton.src = TopBar.DEFAULT_RESOURCES.ICON.SEARCH;
         this.#elements.searchButton.addEventListener("click", function(event){
             let field = self.#elements.searchField;
 
