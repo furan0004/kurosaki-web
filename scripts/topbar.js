@@ -120,10 +120,11 @@ export class TopBar {
 
             if(field.style.display == "none"){
                 field.style.display = "block";
+                field.focus();
             }else{
                 let text = field.value;
 
-                console.log(text);
+                location.href = "https://pages.kurosaki.love?q=" + text;
             }
         });
 
