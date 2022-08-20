@@ -26,6 +26,7 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
 
 function createItem(info){
     let back = document.createElement("div");
+    back.classList.add("item");
 
     let urlRow = document.createElement("div");
     urlRow.classList.add("item-row");
