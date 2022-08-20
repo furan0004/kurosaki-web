@@ -33,4 +33,5 @@
 .item-description{
     font-size: small;
     color: #606060;
+    word-wrap: break-word;
 }

@@ -39,12 +39,13 @@ function createItem(info){
     let anchor = document.createElement("a");
     anchor.classList.add("item-title");
     anchor.innerText = restrictLength(info.title, 30, "...");
+    anchor.href = info.url;
     titleRow.appendChild(anchor);
 
     let descriptionRow = document.createElement("div");
     descriptionRow.classList.add("item-row");
     descriptionRow.classList.add("item-description");
-    descriptionRow.innerText = restrictLength(info.description.replaceAll("\n", ""), 200, "...");
+    descriptionRow.innerText = restrictLength(info.description.replaceAll("\n", " "), 200, "...");
 
     back.appendChild(urlRow);
     back.appendChild(titleRow);
