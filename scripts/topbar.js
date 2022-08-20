@@ -118,20 +118,23 @@ export class TopBar {
         this.#elements.searchButton.addEventListener("click", function(event){
             let field = self.#elements.searchField;
 
-            if(field.style.display == "block"){
+            if(field.style.display == "none"){
+                field.style.display = "block";
+            }else{
                 let text = field.value;
 
                 console.log(text);
-            }else{
-                field.style.display = "block";
             }
         });
 
         this.#elements.searchField = document.createElement("textarea");
         this.#elements.searchField.classList.add(TopBar.CLASS.SEARCH_MENU_FIELD);
+        this.#elements.searchField.style.display = "none";
         this.#elements.searchField.rows = 1;
         this.#elements.searchField.addEventListener("blur", function(event){
-            event.target.style.display = "none";
+            setTimeout(function(){
+                self.#elements.searchField.style.display = "none";
+            }, 50);
         });
 
         this.#elements.searchMenu.appendChild(this.#elements.searchField);
