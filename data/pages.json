@@ -1,19 +1,50 @@
 [
     {
-        "title": "Title",
-        "url": "https://www.google.co.uk",
-        "description": "01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
+        "title": "",
+        "url": "",
+        "description": ""
     },
-
+    
     {
         "title": "pages.kurosaki.love",
         "url": "https://pages.kurosaki.love",
-        "description": "Wordpressサイトが死んだ時用のサブページ"
+        "description": "Wordpressサイトが死んだ時用のサブページ。"
     },
 
     {
         "title": "utils.kurosaki.love",
         "url": "https://utils.kurosaki.love",
-        "description": "手作りのユーティリティを置いておくサイト"
+        "description": "手作りのユーティリティを置いておくサイト。"
+    },
+
+
+    {
+        "title": "Click Counter",
+        "url": "https://utils.kurosaki.love/ClickCounter/",
+        "description": "クリックスピードを測るページ。"
+    },
+
+    {
+        "title": "SI-Prefix Concentration",
+        "url": "https://utils.kurosaki.love/SI-Prefix-Concentration/",
+        "description": "掛けて1倍になる神経衰弱。1人プレイ用。"
+    },
+
+    {
+        "title": "Text Reorder",
+        "url": "https://utils.kurosaki.love/Text-Reorder/",
+        "description": "文字列の入れ替えなどを行える。リピート機能もあるよ。"
+    },
+
+    {
+        "title": "Random String Generator",
+        "url": "https://utils.kurosaki.love/RandomString/",
+        "description": "ランダムな文字を組み合わせて文字列を作れるツール。"
+    },
+
+    {
+        "title": "Product Table",
+        "url": "https://utils.kurosaki.love/ProductTable/",
+        "description": "10進数だけでなく、他の進数の九九を表示する。"
     }
 ]

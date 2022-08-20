@@ -11,7 +11,6 @@ String.prototype.matchCount = function(str){
 
     let index = this.indexOf(str);
     while(index != -1){
-        console.log(index);
         count++;
         index = this.indexOf(str, index + 1);
     }
