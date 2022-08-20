@@ -123,6 +123,7 @@ export class TopBar {
                 field.focus();
             }else{
                 let text = field.value;
+                text = text.replaceAll("　", " ");
 
                 location.href = "https://pages.kurosaki.love?q=" + text;
             }

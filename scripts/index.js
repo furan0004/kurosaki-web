@@ -15,4 +15,5 @@ topbar.setMenu(menuItems);
 elements[0].appendChild(topbar.build());
 export default topbar;
 
-console.log(getQuery(location.href));
+var query = getQuery(location.href);
+console.log(decodeURIComponent(query["q"]));
