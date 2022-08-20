@@ -73,9 +73,9 @@ body{
 
 .topbar_top_menu_search_button{
     width: auto;
-    height: 100%;
+    height: 90%;
     aspect-ratio: 1;
-    margin-left: auto;
+    margin: auto 0 auto auto;
 }
 
 .topbar_top_menu_search_button:hover{
