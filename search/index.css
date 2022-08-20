@@ -12,9 +12,11 @@
     width: auto;
     height: auto;
     margin: auto;
+    padding: 4px 8px;
 
     background: #FFFFFF;
-    border: #00000080 solid 0.5px;
+    border: #00000080 solid 1px;
+    border-radius: 4px;
     
     font-size: large;
     text-align: center;

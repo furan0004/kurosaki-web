@@ -61,6 +61,11 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
         });
 
         document.getElementById("emptyMessage").remove();
+
+        let msg = document.createElement("p");
+        msg.innerText = `search for: ${queries}`;
+
+        line.appendChild(msg);
     }
 
     for(let i = 0; i < searchItems.length; i++){
