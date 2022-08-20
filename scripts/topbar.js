@@ -138,6 +138,12 @@ export class TopBar {
                 self.#elements.searchField.style.display = "none";
             }, 100);
         });
+        this.#elements.searchField.addEventListener("keypress", function(event){
+            if(event.keyCode == 13){
+                self.#elements.searchButton.click();
+                event.preventDefault();
+            }
+        });
 
         this.#elements.searchMenu.appendChild(this.#elements.searchField);
         this.#elements.searchMenu.appendChild(this.#elements.searchButton);
@@ -251,7 +257,7 @@ export class TopBar {
         return this.#bottomMenuItems;
     }
 
-    setSearchQurey(str){
+    setSearchQuery(str){
         this.#elements.searchField.value = str;
     }
 
