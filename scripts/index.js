@@ -1,6 +1,6 @@
 import { TopBar } from "./topbar.js";
 import menuItems  from "../data/menuItems.json" assert { type: "json" };
-import getQuery from "./queryString.js";
+import { getQuery } from "./queryString.js";
 
 import indexSheet from "../styles/index.css" assert {type: "css"};
 document.adoptedStyleSheets.push(indexSheet);
