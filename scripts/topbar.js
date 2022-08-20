@@ -123,7 +123,7 @@ export class TopBar {
 
                 console.log(text);
             }else{
-                field.style.display == "block";
+                field.style.display = "block";
                 self.#elements.searchMenu.background = "#FFFFFF20";
             }
         });
