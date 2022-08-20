@@ -1,8 +1,10 @@
 .item{
-
+    background: #FFFFFF;
 }
 
 .item-url{
+    user-select: none;
+
     color: #585858;
 }
 
