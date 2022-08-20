@@ -31,15 +31,14 @@ function createItem(info){
     let urlRow = document.createElement("div");
     urlRow.classList.add("item-row");
     urlRow.classList.add("item-url");
-    urlRow.innerText = restrictLength(info.url, 20, "...");
+    urlRow.innerText = restrictLength(info.url, 40, "...");
 
     let titleRow = document.createElement("div");
     titleRow.classList.add("item-row");
 
     let anchor = document.createElement("a");
     anchor.classList.add("item-title");
-
-    anchor.innerText = restrictLength(info.title, 20, "...");
+    anchor.innerText = restrictLength(info.title, 30, "...");
     titleRow.appendChild(anchor);
 
     let descriptionRow = document.createElement("div");
