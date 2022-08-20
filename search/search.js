@@ -63,7 +63,7 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
         document.getElementById("emptyMessage").remove();
 
         let msg = document.createElement("p");
-        msg.innerText = `search for: ${queries}`;
+        msg.innerText = queries.length == 0 ? "List of All pages" : `search for: ${queries}`;
 
         line.appendChild(msg);
     }
