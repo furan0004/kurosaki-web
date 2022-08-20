@@ -54,6 +54,7 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
 
         if(score > 0) searchItems.push([pageData[i], score]);
     }
+
     if(searchItems.length != 0){
         searchItems.sort(function(a, b){
             return b[1] - a[1];
@@ -61,8 +62,6 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
 
         document.getElementById("emptyMessage").remove();
     }
-
-
 
     for(let i = 0; i < searchItems.length; i++){
         let item = createItem(searchItems[i][0]);

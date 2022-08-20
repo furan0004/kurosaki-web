@@ -2,7 +2,13 @@
     padding: 4px;
 }
 
-#emptyMessage > .button{
+#emptyMessage > .buttonHolder{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+#emptyMessage > .buttonHolder > .button{
     width: auto;
     height: auto;
     margin: auto;
@@ -15,6 +21,6 @@
     text-decoration: none;
 }
 
-#emptyMessage > .button:hover{
+#emptyMessage > .buttonHolder > .button:hover{
     text-decoration: underline;
 }
