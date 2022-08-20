@@ -1,0 +1,20 @@
+.item{
+
+}
+
+.item-url{
+    color: #585858;
+}
+
+.item-title{
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.item-title:hover{
+    text-decoration: underline;
+}
+
+.item-description{
+    color: #606060;
+}

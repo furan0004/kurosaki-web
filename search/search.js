@@ -31,7 +31,7 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
 })();
 
 function createItem(info){
-    let back = docment.createElement("div");
+    let back = document.createElement("div");
 
     return back;
 }
