@@ -1,6 +1,8 @@
 export function getQuery(url){
-    let result = [];
+    if(url.indexOf("?") == -1) return [];
     
+    let result = [];
+
     let query = url.split("?")[1];
     let lines = query.split("&");
     for(let i = 0; i < lines.length; i++){
