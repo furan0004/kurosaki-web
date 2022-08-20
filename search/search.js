@@ -1,5 +1,5 @@
 import topbar from "../scripts/index.js";
-import { getQuery } from "./queryString.js";
+import { getQuery } from "../scripts/queryString.js";
 
 var query = getQuery(location.href);
 var queries = decodeURIComponent(query["q"]).replaceAll("　", " ").split(" ");
