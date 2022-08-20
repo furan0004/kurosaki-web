@@ -25,12 +25,13 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
 
         let keys = Object.keys(pageData[i]);
         for(let j = 0; j < keys.length; j++){
-            let data = pageData[i][keys[j]]
-            for(let k = 0; k < queryList.length; k++){
-                if(data == query[k]) score += 10**6;
-                if(data.toLowerCase() == query[k].toLowerCase()) score += 10**3;
+            let data = pageData[i][keys[j]];
 
-                score += 3*data.matchCount(query[k]) + data.toLowerCase().matchCount(query[k].toLowerCase());
+            for(let k = 0; k < queryList.length; k++){
+                if(data == queryList[k]) score += 10**6;
+                if(data.toLowerCase() == queryList[k].toLowerCase()) score += 10**3;
+
+                score += 3*data.matchCount(queryList[k]) + data.toLowerCase().matchCount(queryList[k].toLowerCase());
             }
        }
 
