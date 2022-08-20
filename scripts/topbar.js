@@ -124,7 +124,6 @@ export class TopBar {
                 console.log(text);
             }else{
                 field.style.display = "block";
-                self.#elements.searchMenu.background = "#FFFFFF20";
             }
         });
 
@@ -133,7 +132,6 @@ export class TopBar {
         this.#elements.searchField.rows = 1;
         this.#elements.searchField.addEventListener("blur", function(event){
             event.target.style.display = "none";
-            self.#elements.searchMenu.background = "transparent";
         });
 
         this.#elements.searchMenu.appendChild(this.#elements.searchField);
