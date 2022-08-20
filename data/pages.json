@@ -3,5 +3,17 @@
         "title": "Title",
         "url": "https://www.google.co.uk",
         "description": "Google in UK"
+    },
+
+    {
+        "title": "pages.kurosaki.love",
+        "url": "https://pages.kurosaki.love",
+        "description": "Wordpressサイトが死んだ時用のサブページ"
+    },
+
+    {
+        "title": "utils.kurosaki.love",
+        "url": "https://utils.kurosaki.love",
+        "description": "手作りのユーティリティを置いておくサイト"
     }
 ]
