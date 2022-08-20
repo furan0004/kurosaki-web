@@ -52,10 +52,10 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
             }
        }
 
-        if(score > 0) searchItems.push([pageData[i], score]);
+        if(score != 0) searchItems.push([pageData[i], score]);
     }
 
-    if(searchItems.length != 0){
+    if(searchItems.length > 0){
         searchItems.sort(function(a, b){
             return b[1] - a[1];
         });
