@@ -17,7 +17,7 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ").split(" ");
         let p = document.createElement("p");
         let keys = Object.keys(pageData[i]);
         for(let j = 0; j < keys.length; j++){
-            p.innerHTML += `${(i == 0 ? "" : "<br>")} ${keys[i]}: ${pageData[keys[i]]}`;
+            p.innerHTML += `${(i == 0 ? "" : "<br>")} ${keys[j]}: ${pageData[i][keys[j]]}`;
         }
 
         line.appendChild(p);
