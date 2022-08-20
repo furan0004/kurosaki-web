@@ -7,7 +7,7 @@ import itemStyle from "./item.css" assert {type: "css"};
 document.adoptedStyleSheets.push(itemStyle);
 
 String.prototype.matchCount = function(str){
-    if(str.length <= 0) return -1;
+    if(this.length * str.length <= 0) return -1;
 
     let count = 0;
 
