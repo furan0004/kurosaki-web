@@ -6,6 +6,10 @@
     overflow: hidden;
 }
 
+.item *{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .item-row{
     width: 100%;
     height: auto;
