@@ -2,9 +2,14 @@
     background: #FFFFFF;
 }
 
+.item-row{
+    margin: 4px 0;
+}
+
 .item-url{
     user-select: none;
 
+    font-size: small;
     color: #585858;
 }
 
@@ -18,5 +23,6 @@
 }
 
 .item-description{
+    font-size: small;
     color: #606060;
 }
