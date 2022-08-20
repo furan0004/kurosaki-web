@@ -125,7 +125,7 @@ export class TopBar {
                 let text = field.value;
                 text = text.replaceAll("　", " ");
 
-                location.href = "https://pages.kurosaki.love?q=" + text;
+                location.href = "https://pages.kurosaki.love/search?q=" + text;
             }
         });
 
@@ -249,5 +249,13 @@ export class TopBar {
 
     getMenu(){
         return this.#bottomMenuItems;
+    }
+
+    setSearchQurey(str){
+        this.#elements.searchField.value = str;
+    }
+
+    getSearchQuery(){
+        return this.#elements.searchField.value;
     }
 }

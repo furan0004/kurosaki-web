@@ -1,5 +1,4 @@
 import { TopBar } from "./topbar.js";
-import { getQuery } from "./queryString.js";
 import menuItems  from "../data/menuItems.json" assert { type: "json" };
 
 import indexSheet from "../styles/index.css" assert {type: "css"};
@@ -14,6 +13,3 @@ topbar.setMenu(menuItems);
 
 elements[0].appendChild(topbar.build());
 export default topbar;
-
-var query = getQuery(location.href);
-console.log(decodeURIComponent(query["q"]));
