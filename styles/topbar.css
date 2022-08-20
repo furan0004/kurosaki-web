@@ -62,12 +62,14 @@ body{
 }
 
 .topbar_top_menu_search_field{
-    width: max-content;
-    height: 100%;
+    width: 96%;
+    height: 96%;
     display: none;
+    margin: auto;
 
     resize: none;
     border: none;
+    background: transparent;
 }
 
 .topbar_top_menu_search_button{

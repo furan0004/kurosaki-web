@@ -124,13 +124,16 @@ export class TopBar {
                 console.log(text);
             }else{
                 field.style.display == "block";
+                self.#elements.searchMenu.background = "#FFFFFF20";
             }
         });
 
         this.#elements.searchField = document.createElement("textarea");
         this.#elements.searchField.classList.add(TopBar.CLASS.SEARCH_MENU_FIELD);
+        this.#elements.searchField.rows = 1;
         this.#elements.searchField.addEventListener("blur", function(event){
-            event.target.style.display == "none";
+            event.target.style.display = "none";
+            self.#elements.searchMenu.background = "transparent";
         });
 
         this.#elements.searchMenu.appendChild(this.#elements.searchField);
