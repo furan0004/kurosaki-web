@@ -134,7 +134,7 @@ export class TopBar {
         this.#elements.searchField.addEventListener("blur", function(event){
             setTimeout(function(){
                 self.#elements.searchField.style.display = "none";
-            }, 50);
+            }, 100);
         });
 
         this.#elements.searchMenu.appendChild(this.#elements.searchField);
