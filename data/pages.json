@@ -4,7 +4,25 @@
         "url": "",
         "description": ""
     },
-    
+
+    {
+        "title": "黒咲くろんのTwitter",
+        "url": "https://twitter.com/KuronKurosaki",
+        "description": "メインアカウント。推しを見ることと、投稿したブログ記事の共有の為に使う。"
+    },
+
+    {
+        "title": "くろんのTwitter",
+        "url": "https://twitter.com/kuron_nano",
+        "description": "毎日使っているサブアカウント。しょーもない投稿とRTばかり。"
+    },
+
+    {
+        "title": "(仮称) 黒咲くろんのホームページ",
+        "url": "https://kurosaki.love/",
+        "description": "メインのホームページ。Wordpressで作った。"
+    },
+
     {
         "title": "pages.kurosaki.love",
         "url": "https://pages.kurosaki.love",
