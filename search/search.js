@@ -3,6 +3,9 @@ import { getQuery } from "../scripts/queryString.js";
 import { restrictLength } from "https://utils.kurosaki.love/scripts/functions.js";
 import pageData from "../data/pages.json" assert {type: "json"};
 
+import indexCss from "./index.css" assert {type: "css"};
+document.adoptedStyleSheets.push(indexCss);
+
 import itemStyle from "./item.css" assert {type: "css"};
 document.adoptedStyleSheets.push(itemStyle);
 
@@ -58,6 +61,8 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
 
         document.getElementById("emptyMessage").remove();
     }
+
+
 
     for(let i = 0; i < searchItems.length; i++){
         let item = createItem(searchItems[i][0]);

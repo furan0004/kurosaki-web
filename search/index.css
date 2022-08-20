@@ -1,0 +1,20 @@
+#emptyMessage{
+    padding: 4px;
+}
+
+#emptyMessage > .button{
+    width: auto;
+    height: auto;
+    margin: auto;
+
+    background: #FFFFFF;
+    border: #00000080 solid 0.5px;
+    
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+}
+
+#emptyMessage > .button:hover{
+    text-decoration: underline;
+}
