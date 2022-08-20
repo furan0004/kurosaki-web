@@ -62,6 +62,8 @@ body{
 }
 
 .topbar_top_menu_search_field{
+    width: max-content;
+    height: 100%;
     display: none;
 
     resize: none;
@@ -72,6 +74,7 @@ body{
     width: auto;
     height: 100%;
     aspect-ratio: 1;
+    margin-left: auto;
 }
 
 .topbar_top_menu_search_button:hover{
