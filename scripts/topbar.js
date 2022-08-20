@@ -29,9 +29,9 @@ export class TopBar {
         HOME_BUTTON_ANCHOR: "topbar_top_menu_home_anchor",
         HOME_BUTTON: "topbar_top_menu_home",
 
-        SEARCH_MENU: ".topbar_top_menu_search",
-        SEARCH_MENU_FIELD: ".topbar_top_menu_search_field",
-        SEARCH_MENU_BUTTON: ".topbar_top_menu_search_button",
+        SEARCH_MENU: "topbar_top_menu_search",
+        SEARCH_MENU_FIELD: "topbar_top_menu_search_field",
+        SEARCH_MENU_BUTTON: "topbar_top_menu_search_button",
 
         BLANK: "topbar_blank",
         TITLEBAR: "topbar_title",
@@ -133,8 +133,8 @@ export class TopBar {
             event.target.style.display == "none";
         });
 
-        this.#elements.searchMenu.appendChild(this.#elements.searchButton);
         this.#elements.searchMenu.appendChild(this.#elements.searchField);
+        this.#elements.searchMenu.appendChild(this.#elements.searchButton);
         this.#elements.topMenu.appendChild(this.#elements.searchMenu);
 
         this.#elements.blank = document.createElement("div");

@@ -55,7 +55,10 @@ body{
 }
 
 .topbar_top_menu_search{
-
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin-left: auto;
 }
 
 .topbar_top_menu_search_field{
