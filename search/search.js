@@ -6,6 +6,19 @@ import pageData from "../data/pages.json" assert {type: "json"};
 import itemStyle from "./item.css" assert {type: "css"};
 document.adoptedStyleSheets.push(itemStyle);
 
+String.prototype.matchCount = function(str){
+    let count = 0;
+
+    let index = this.indexOf(str);
+    while(index != -1){
+        console.log(index);
+        count++;
+        index = this.indexOf(str, index + 1);
+    }
+
+    return count;
+};
+
 var line = document.getElementsByClassName("line")[0];
 
 var query = getQuery(location.href);
@@ -31,7 +44,7 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
                 if(data == queryList[k]) score += 10**6;
                 if(data.toLowerCase() == queryList[k].toLowerCase()) score += 10**3;
 
-                score += 3*data.matchCount(queryList[k]) + data.toLowerCase().matchCount(queryList[k].toLowerCase());
+                score += 3 * data.matchCount(queryList[k]) + data.toLowerCase().matchCount(queryList[k].toLowerCase());
             }
        }
 
@@ -79,18 +92,4 @@ function createItem(info){
     back.appendChild(descriptionRow);
 
     return back;
-}
-
-
-String.prototype.matchCount = function(str){
-    let count = 0;
-
-    let index = this.indexOf(str);
-    while(index != -1){
-        console.log(index);
-        count++;
-        index = this.indexOf(str, index + 1);
-    }
-
-    return count;
 }
