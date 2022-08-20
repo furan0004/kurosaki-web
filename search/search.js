@@ -1,6 +1,6 @@
 import topbar from "../scripts/index.js";
 import { getQuery } from "../scripts/queryString.js";
-import pageData from "../data/pages.json";
+import pageData from "../data/pages.json" assert {type: "json"};
 
 var line = document.getElementsByClassName("line")[0];
 
