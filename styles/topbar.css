@@ -54,6 +54,27 @@ body{
     background: #FFFFFF20;
 }
 
+.topbar_top_menu_search{
+
+}
+
+.topbar_top_menu_search_field{
+    display: none;
+
+    resize: none;
+    border: none;
+}
+
+.topbar_top_menu_search_button{
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+.topbar_top_menu_search_button:hover{
+    background: #FFFFFF20;
+}
+
 .topbar_blank{
     width: auto;
     height: calc(100% - 96px);

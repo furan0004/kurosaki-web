@@ -27,6 +27,10 @@ export class TopBar {
         HOME_BUTTON_ANCHOR: "topbar_top_menu_home_anchor",
         HOME_BUTTON: "topbar_top_menu_home",
 
+        SEARCH_MENU: ".topbar_top_menu_search",
+        SEARCH_MENU_FIELD: ".topbar_top_menu_search_field",
+        SEARCH_MENU_BUTTON: ".topbar_top_menu_search_button",
+
         BLANK: "topbar_blank",
         TITLEBAR: "topbar_title",
 
@@ -44,6 +48,10 @@ export class TopBar {
         topMenu: null,
         homeButtonAnchor: null,
         homeButton: null,
+        searchMenu: null,
+        searchButton: null,
+        searchField: null,
+        blank: null,
         bottomMenu: null,
         bottomMenuBtns: [],
     };
@@ -75,6 +83,8 @@ export class TopBar {
     }
 
     renew(){
+        let self = this;
+
         if(this.#elements.cover != null) this.#elements.cover.remove();
         this.#elements.cover = document.createElement("div");
         this.#elements.cover.classList.add(TopBar.CLASS.COVER);
@@ -95,6 +105,34 @@ export class TopBar {
             this.#elements.homeButtonAnchor.appendChild(this.#elements.homeButton);
             this.#elements.topMenu.appendChild(this.#elements.homeButtonAnchor);
         }
+
+
+        this.#elements.searchMenu = document.createElement("div");
+        this.#elements.searchMenu.classList.add(TopBar.CLASS.SEARCH_MENU);
+        
+        this.#elements.searchButton = document.createElement("img");
+        this.#elements.searchButton.classList.add(TopBar.CLASS.SEARCH_MENU_BUTTON);
+        this.#elements.searchButton.addEventListener("click", function(event){
+            let field = self.#elements.searchField;
+
+            if(field.style.display == "block"){
+                let text = field.value;
+
+                console.log(text);
+            }else{
+                field.style.display == "block";
+            }
+        });
+
+        this.#elements.searchField = document.createElement("textarea");
+        this.#elements.searchField.classList.add(TopBar.CLASS.SEARCH_MENU_FIELD);
+        this.#elements.searchField.addEventListener("blur", function(event){
+            event.target.style.display == "none";
+        });
+
+        this.#elements.searchMenu.appendChild(this.#elements.searchButton);
+        this.#elements.searchMenu.appendChild(this.#elements.searchField);
+        this.#elements.topMenu.appendChild(this.#elements.searchMenu);
 
         this.#elements.blank = document.createElement("div");
         this.#elements.blank.classList.add(TopBar.CLASS.BLANK);
