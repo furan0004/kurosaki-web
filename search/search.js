@@ -4,7 +4,7 @@ import { restrictLength } from "https://utils.kurosaki.love/scripts/functions.js
 import pageData from "../data/pages.json" assert {type: "json"};
 
 import itemStyle from "" assert {type: "css"};
-document.adoptedStyleSheets.push(itemStyle);
+//document.adoptedStyleSheets.push(itemStyle);
 
 var line = document.getElementsByClassName("line")[0];
 
