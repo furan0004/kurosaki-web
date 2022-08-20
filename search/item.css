@@ -3,10 +3,14 @@
     height: auto;
     margin: 8px auto;
 
+    overflow: hidden;
+
     background: #FFFFFF;
 }
 
 .item-row{
+    width: 100%;
+    height: auto;
     margin: 4px 0;
 }
 
