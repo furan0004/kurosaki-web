@@ -1,6 +1,6 @@
 #searchPane{
     width: 100%;
-    height: auto;
+    height: 128px;
     display: flex;
 
     background: #FFFFFF;
