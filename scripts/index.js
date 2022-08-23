@@ -1,7 +1,7 @@
 import { TopBar } from "./topbar.js";
 
-import indexStyle from "../styles/index.css" assert {type: "css"};
-document.adoptedStyleSheets.push(indexStyle);
+import superIndexStyle from "../styles/index.css" assert {type: "css"};
+document.adoptedStyleSheets.push(superIndexStyle);
 
 import itemStyle from "../styles/elementItems.css" assert {type: "css"};
 document.adoptedStyleSheets.push(itemStyle);
