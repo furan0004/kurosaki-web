@@ -15,7 +15,7 @@ a{
 
 .line > *{
     width: 100%;
-    margin: 4px 0;
+    margin: 8px 0;
 }
 
 @media screen and (max-width: 959px) {
