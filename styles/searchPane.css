@@ -1,0 +1,15 @@
+#searchPane{
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    background: #FFFFFF;
+    border: #000000 solid 1px;
+}
+
+#searchQuery{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 8px;
+}
