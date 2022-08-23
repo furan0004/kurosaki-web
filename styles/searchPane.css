@@ -8,8 +8,9 @@
 }
 
 #searchHolder{
-    width: 90%;
+    width: 80%;
     height: 32px;
+    display: flex;
     margin: auto;
     padding: 0 32px;
 
