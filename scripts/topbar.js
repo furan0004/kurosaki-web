@@ -6,7 +6,7 @@ const root = ["https://pages.kurosaki.love/", "https://pages.kurosaki.love/index
 export class TopBar {
     static ROOT_PATH = [root[0], ""][Math.sign(1 + root.indexOf(location.href))];
     static DEFAULT_RESOURCES = {
-        BACKGROUND: TopBar.ROOT_PATH + "res/images/flower5544.jpg",
+        BACKGROUND: TopBar.ROOT_PATH + "res/images/24117110_l.jpg",
         ICON: {
             HOME: TopBar.ROOT_PATH + "res/images/home.svg",
             SEARCH: TopBar.ROOT_PATH + "res/images/search.svg",
