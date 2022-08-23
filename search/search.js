@@ -29,6 +29,7 @@ var query = getQuery(location.href);
 var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
 
 (function(){
+    topbar.setHome("../");
     topbar.setTitle(document.title);
     topbar.setMenu([]);
     topbar.load();
