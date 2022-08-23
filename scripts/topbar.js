@@ -71,7 +71,7 @@ export class TopBar {
     */
 
 
-    #background = `url('${TopBar.DEFAULT_RESOURCES.BACKGROUND}')`;
+    #background = TopBar.DEFAULT_RESOURCES.BACKGROUND;
 
     #home;
     #homeIcon = TopBar.DEFAULT_RESOURCES.ICON.HOME;
