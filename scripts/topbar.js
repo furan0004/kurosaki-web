@@ -167,6 +167,7 @@ export class TopBar {
         for(let i = 0; i < this.#bottomMenuItems.length; i++){
             let anchor = document.createElement("a");
             anchor.classList.add(TopBar.CLASS.BOTTOM_MENU_BUTTON_ANCHOR);
+            anchor.style.width = `${100 / this.#bottomMenuItems.length}%`;
             anchor.href = this.#bottomMenuItems[i].url;
 
             let btn = document.createElement("div");
