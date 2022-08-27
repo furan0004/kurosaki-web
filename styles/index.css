@@ -4,7 +4,8 @@ a{
 }
 
 .line{
-    width: 944px;
+    width: calc(100vw - 16px);
+    max-width: 944px;
     min-height: calc(75vh - 16px);
 
     margin: 0 auto;
@@ -14,10 +15,4 @@ a{
 .line > *{
     width: 100%;
     margin: 8px 0;
-}
-
-@media screen and (max-width: 959px) {
-    .line{
-        width: calc(100vw - 16px);
-    }
 }
