@@ -1,6 +1,6 @@
 import topbar from "../scripts/index.js";
 import { getQuery } from "../scripts/queryString.js";
-import { restrictLength } from "https://utils.kurosaki.love/scripts/functions.js";
+import { restrictLength } from "https://utils.kurosaki.love/lib/functions/stringOrder.js";
 import pageData from "../data/pages.json" assert {type: "json"};
 
 import indexCss from "./index.css" assert {type: "css"};
