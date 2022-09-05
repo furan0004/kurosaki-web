@@ -1,9 +1,6 @@
 import { importStyle } from "https://utils.kurosaki.love/lib/functions/first.js";
 importStyle("https://pages.kurosaki.love/styles/topbar.css");
 
-import topbarSheet from "../styles/topbar.css" assert {type: "css"};
-//document.adoptedStyleSheets.push(topbarSheet);
-
 const root = ["https://pages.kurosaki.love/", "https://pages.kurosaki.love/index.html"];
 
 export class TopBar {
