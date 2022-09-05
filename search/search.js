@@ -1,13 +1,7 @@
 import topbar from "../scripts/index.js";
-import { getQuery } from "../scripts/queryString.js";
 import { restrictLength } from "https://utils.kurosaki.love/lib/functions/stringOrder.js";
-import pageData from "../data/pages.json" assert {type: "json"};
+import { importStyles, importJSON} from "https://utils.kurosaki.love/lib/functions/first.js";
 
-import indexCss from "./index.css" assert {type: "css"};
-document.adoptedStyleSheets.push(indexCss);
-
-import itemStyle from "./item.css" assert {type: "css"};
-document.adoptedStyleSheets.push(itemStyle);
 
 String.prototype.matchCount = function(str){
     if(this.length * str.length <= 0) return -1;
@@ -25,17 +19,24 @@ String.prototype.matchCount = function(str){
 
 var line = document.getElementsByClassName("line")[0];
 
-var query = getQuery(location.href);
-var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
-
 (function(){
+    importStyles(["https://pages.kurosaki.love/search/index.css", "https://pages.kurosaki.love/search/item.css"]);
+
     topbar.setHome("../");
     topbar.setTitle(document.title);
     topbar.setMenu([]);
     topbar.load();
     topbar.setSearchQuery(queries);
 
-    let queryList = queries.split(" ");
+    
+})();
+
+async function applyList(){
+    let pageData = await importJSON("https://pages.kurosaki.love/data/pages.json");
+
+    let querList = await import("../scripts/queryString.js").then(function(module){
+        return module.getQuery(location.href)
+    }).catch(err => console.log(err)).replaceAll("　", " ").split(" ");
 
     let searchItems = [];
     for(let i = 0; i < pageData.length; i++){
@@ -51,7 +52,7 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
 
                 score += 3 * data.matchCount(queryList[k]) + data.toLowerCase().matchCount(queryList[k].toLowerCase());
             }
-       }
+        }
 
         if(score != 0) searchItems.push([pageData[i], score]);
     }
@@ -73,7 +74,7 @@ var queries = decodeURIComponent(query["q"]).replaceAll("　", " ");
         let item = createItem(searchItems[i][0]);
         line.appendChild(item);
     }
-})();
+}
 
 function createItem(info){
     let back = document.createElement("div");
