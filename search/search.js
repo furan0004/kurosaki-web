@@ -27,7 +27,7 @@ var line = document.getElementsByClassName("line")[0];
 async function applyList(){
     let pageData = await importJSON("https://pages.kurosaki.love/data/pages.json");
 
-    let queryList = await import("../scripts/queryString.js").then(function(module){
+    let queries = await import("../scripts/queryString.js").then(function(module){
         let query = module.getQuery(location.href)["q"].replaceAll("　", " ");
 
         topbar.setHome("../");
@@ -36,8 +36,9 @@ async function applyList(){
         topbar.load();
         topbar.setSearchQuery(query);
 
-        return query.split(" ");
+        return query;
     }).catch(err => console.log(err));
+    let queryList = queries.split(" ");
 
     let searchItems = [];
     for(let i = 0; i < pageData.length; i++){
