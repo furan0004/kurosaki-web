@@ -1,5 +1,5 @@
 import { importStyle } from "https://utils.kurosaki.love/lib/functions/first.js";
-importStyle("/styles/topbar.css");
+importStyle("https://pages.kurosaki.love/styles/topbar.css");
 
 import topbarSheet from "../styles/topbar.css" assert {type: "css"};
 //document.adoptedStyleSheets.push(topbarSheet);
