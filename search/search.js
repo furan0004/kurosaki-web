@@ -2,7 +2,6 @@ import topbar from "../scripts/index.js";
 import { restrictLength } from "https://utils.kurosaki.love/lib/functions/stringOrder.js";
 import { importStyles, importJSON} from "https://utils.kurosaki.love/lib/functions/first.js";
 
-
 String.prototype.matchCount = function(str){
     if(this.length * str.length <= 0) return -1;
 
@@ -107,5 +106,3 @@ function createItem(info){
 
     return back;
 }
-
-async function 
