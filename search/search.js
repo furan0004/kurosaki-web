@@ -21,22 +21,24 @@ var line = document.getElementsByClassName("line")[0];
 
 (function(){
     importStyles(["https://pages.kurosaki.love/search/index.css", "https://pages.kurosaki.love/search/item.css"]);
-
-    topbar.setHome("../");
-    topbar.setTitle(document.title);
-    topbar.setMenu([]);
-    topbar.load();
-    topbar.setSearchQuery(queries);
-
+    applyList();
     
 })();
 
 async function applyList(){
     let pageData = await importJSON("https://pages.kurosaki.love/data/pages.json");
 
-    let querList = await import("../scripts/queryString.js").then(function(module){
-        return module.getQuery(location.href)
-    }).catch(err => console.log(err)).replaceAll("　", " ").split(" ");
+    let queryList = await import("../scripts/queryString.js").then(function(module){
+        let query = module.getQuery(location.href)["q"].replaceAll("　", " ");
+
+        topbar.setHome("../");
+        topbar.setTitle(document.title);
+        topbar.setMenu([]);
+        topbar.load();
+        topbar.setSearchQuery(query);
+
+        return query.split(" ");
+    }).catch(err => console.log(err));
 
     let searchItems = [];
     for(let i = 0; i < pageData.length; i++){
@@ -105,3 +107,5 @@ function createItem(info){
 
     return back;
 }
+
+async function 
